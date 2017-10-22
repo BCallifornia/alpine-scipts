@@ -17,7 +17,7 @@ gpg --verify /usr/local/bin/gosu.asc
 rm /usr/local/bin/gosu.asc
 chmod +x /usr/local/bin/gosu
 mkdir -p /docker-entrypoint-initdb.d
-wget ftp://ftp.postgresql.org/pub/source/v$PG_VERSION/postgresql-$PG_VERSION.tar.bz2 -O /tmp/postgresql-$PG_VERSION.tar.bz2
+wget http://ftp.postgresql.org/pub/source/v$PG_VERSION/postgresql-$PG_VERSION.tar.bz2 -O /tmp/postgresql-$PG_VERSION.tar.bz2
 tar xvfj /tmp/postgresql-$PG_VERSION.tar.bz2 -C /tmp
 cd /tmp/postgresql-$PG_VERSION || exit
 ./configure --enable-integer-datetimes --enable-thread-safety --prefix=/usr/local --with-libedit-preferred --with-openssl
