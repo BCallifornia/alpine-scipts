@@ -1,9 +1,9 @@
 #!/bin/sh
-ENV PG_MAJOR 9.6
-ENV PG_VERSION 9.6.2
+PG_MAJOR=9.6
+PG_VERSION=9.6.2
 
-ENV PATH /usr/lib/postgresql/$PG_MAJOR/bin:$PATH
-ENV PGDATA /var/lib/postgresql/data
+PATH=/usr/lib/postgresql/$PG_MAJOR/bin:$PATH
+PGDATA=/var/lib/postgresql/data
 
 ENV LANG en_US.utf8
 
